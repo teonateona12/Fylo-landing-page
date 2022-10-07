@@ -11,6 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/66287790bb.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="icon" type="image/x-icon" href="./images/favicon-32x32.png" />
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -31,34 +35,38 @@
         <div class="image">
           <img src="./images/illustration-1.svg" />
         </div>
-        <h1>All your files in one secure location, accessible anywhere.</h1>
-        <p>
-          Fylo stores your most important files in one secure location. Access
-          them wherever you need, share and collaborate with friends, family,
-          and co-workers.
-        </p>
+        <div class="text-div">
+          <h1>All your files in one secure location, accessible anywhere.</h1>
+          <p>
+            Fylo stores your most important files in one secure location. Access
+            them wherever you need, share and collaborate with friends, family,
+            and co-workers.
+          </p>
 
-        <!-- form -->
-        <form id="form" action="/">
-          <div class="input-control">
-            <input
-              id="email"
-              name="email"
-              type="text"
-              placeholder="Enter your email…"
-            />
-            <div class="error"></div>
-          </div>
-          <button type="submit">Get Started</button>
-        </form>
+          <!-- form -->
+          <form id="form" class="form two" action="/">
+            <div class="input-control">
+              <input
+                id="email"
+                name="email"
+                type="text"
+                placeholder="Enter your email…"
+                class="email"
+              />
+              <div class="error"></div>
+            </div>
+            <button type="submit">Get Started</button>
+          </form>
+        </div>
       </header>
     </div>
+
     <!-- card -->
     <div class="card">
       <div class="img-two">
         <img src="./images/illustration-2.svg" />
       </div>
-      <div class="text-div">
+      <div class="text-div one">
         <p class="card-text">Stay productive, wherever you are</p>
         <p class="card-text-two">
           Never let location be an issue when accessing your files. Fylo has you
@@ -93,27 +101,65 @@
 
     <!-- colored container -->
     <div class="container">
-      <p class="container-text">Get early access today</p>
-      <p class="container-text-two">
-        It only takes a minute to sign up and our free starter tier is extremely
-        generous. If you have any questions, our support team would be happy to
-        help you.
-      </p>
-
+      <div class="color-text">
+        <p class="container-text">Get early access today</p>
+        <p class="container-text-two">
+          It only takes a minute to sign up and our free starter tier is
+          extremely generous. If you have any questions, our support team would
+          be happy to help you.
+        </p>
+      </div>
       <!-- form -->
-      <form id="form" action="/">
+      <form id="form" class="form three" action="/">
         <div class="input-control">
           <input
             id="email"
             name="email"
             type="text"
             placeholder="Email@example.com"
+            class="email"
           />
           <div class="error"></div>
         </div>
         <button class="btn-two" type="submit">Get Started For Free</button>
       </form>
     </div>
+
+    <!-- footer -->
+    <footer class="black-div">
+      <div>
+        <div class="logo-two">
+          <img src="images/logo.svg" alt="Fylo logo" />
+        </div>
+        <div class="phone">
+          <img src="./images/icon-phone.svg" />
+          <p>Phone: +1-543-123-4567</p>
+        </div>
+
+        <div class="phone">
+          <img src="./images/icon-email.svg" />
+          <p>example@fylo.com</p>
+        </div>
+      </div>
+      <div class="nav-div">
+        <p>About Us</p>
+        <p>jobs</p>
+        <p>Press</p>
+        <p>Blog</p>
+      </div>
+      <div class="nav-div-two">
+        <p>Contact Us</p>
+        <p>Terms</p>
+        <p>Privacy</p>
+      </div>
+
+      <div class="logo-div">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+    </footer>
+
 
     <script src="index.js"></script>
   </body>

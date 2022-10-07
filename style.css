@@ -7,20 +7,21 @@ body {
 }
 .logo img {
   width: 60%;
+  height: 60%;
 }
 nav,
 nav div {
   display: flex;
 }
 nav {
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 nav p {
   font-weight: 400;
   font-size: 12px;
   color: #07043b;
-  padding: 3px;
+  padding: 20px;
 }
 header h1 {
   font-weight: 700;
@@ -155,7 +156,7 @@ hr {
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
-text-align: center;
+  text-align: center;
   color: #ffffff;
 }
 .container-text-two {
@@ -165,6 +166,141 @@ text-align: center;
   text-align: center;
   color: #ffffff;
 }
-.btn-two{
+.btn-two {
   margin-bottom: 0;
+}
+
+.logo-two img {
+  color: white;
+  width: 105px;
+}
+.black-div {
+  background-color: #07043b;
+  padding: 65px 40px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.phone {
+  display: flex;
+}
+
+.phone img {
+  width: 20px;
+  height: 20px;
+}
+.phone p,
+.nav-div p,
+.nav-div-two p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  margin: 0;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.nav-div p,
+.nav-div-two p {
+  margin: 0;
+  margin-top: 5px;
+}
+i {
+  color: white;
+  margin-left: 10px;
+}
+.logo-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 1440px) {
+  .main {
+    padding: 84px;
+  }
+  nav {
+    justify-content: space-between;
+  }
+  .logo img {
+    width: 100%;
+  }
+  nav p {
+    font-size: 16px;
+  }
+  header,
+  .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  .image,
+  .img-two {
+    order: 2;
+  }
+  .text-div {
+    order: 1;
+    margin-top: 30%;
+  }
+
+  form {
+    display: flex;
+  }
+
+  button {
+    margin-top: 0;
+    width: 30%;
+    height: 50px;
+  }
+  .text-div p,
+  .text-div h1,
+  .container-text,
+  .container-text-two {
+    text-align: left;
+  }
+  .one {
+    margin-top: 5%;
+  }
+  hr {
+    margin-left: 0;
+    width: 20%;
+  }
+  .grean-div {
+    justify-content: left;
+  }
+  .card-small {
+    width: 45%;
+  }
+  .container,
+  .black-div {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 80px 100px 80px;
+  }
+  .color-text {
+    width: 40%;
+  }
+  .btn-two {
+    width: 70%;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .form {
+    flex-direction: column;
+  }
+  .black-div,
+  .two {
+    flex-direction: row;
+  }
+  .card {
+    padding: 80px;
+  }
+  .three{
+    width: 40%;
+  }
+  .input-control{
+    width: 50%;
+  }
 }
