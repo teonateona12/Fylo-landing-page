@@ -1,0 +1,170 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
+.main {
+  padding: 28px;
+}
+.logo img {
+  width: 60%;
+}
+nav,
+nav div {
+  display: flex;
+}
+nav {
+  justify-content: space-around;
+}
+
+nav p {
+  font-weight: 400;
+  font-size: 12px;
+  color: #07043b;
+  padding: 3px;
+}
+header h1 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  color: #07043b;
+}
+.image img,
+.img-two img {
+  max-width: 100%;
+}
+.image {
+  margin: 100px 0 40px 0;
+}
+header p {
+  margin: 24px 0 32px 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: #07043b;
+}
+input {
+  border-radius: 3px;
+  border: 0.625px solid #07043b;
+  padding: 14px 0 14px 21px;
+  width: 92%;
+}
+button {
+  background-color: #2f65f8;
+  color: white;
+  border-radius: 3px;
+  width: 100%;
+  border: none;
+  padding: 12px;
+  text-align: center;
+  margin-top: 16px;
+  margin-bottom: 183px;
+}
+
+.input-control.error input {
+  border-color: red;
+}
+.input-control .error {
+  color: red;
+}
+.card {
+  background-color: #f8f8fe;
+  padding: 28px;
+}
+.card-text {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #07043b;
+}
+
+.card-text-two {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: #615f7e;
+}
+.grean-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.grean-div p {
+  font-weight: 400;
+  font-size: 12px;
+  color: #3da08f;
+  margin: 0;
+}
+hr {
+  background: #3da08f;
+  width: 40%;
+}
+.card-small {
+  background: #ffffff;
+  box-shadow: 0px 0px 8px 4px rgba(56, 56, 56, 0.0458843);
+  border-radius: 3.93258px;
+  padding: 25px;
+  margin-top: 40px;
+}
+.card-small-text {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 18px;
+  /* or 181% */
+
+  letter-spacing: 0.384615px;
+}
+.pic-div {
+  display: flex;
+  margin-top: 26px;
+}
+.pic-div img {
+  border-radius: 50%;
+  width: 10%;
+  height: 10%;
+}
+.name {
+  font-weight: 700;
+  font-size: 9px;
+  line-height: 12px;
+  letter-spacing: 0.45px;
+  margin: 0;
+  color: #07043b;
+}
+.job {
+  font-weight: 400;
+  font-size: 6px;
+  line-height: 12px;
+  /* identical to box height, or 197% */
+  margin: 0;
+  letter-spacing: 0.3px;
+
+  color: #07043b;
+}
+.avatar-info {
+  margin-left: 10px;
+}
+.container {
+  background-color: #575988;
+  padding: 54px 50px 54px 50px;
+}
+.container-text {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+text-align: center;
+  color: #ffffff;
+}
+.container-text-two {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: #ffffff;
+}
+.btn-two{
+  margin-bottom: 0;
+}
