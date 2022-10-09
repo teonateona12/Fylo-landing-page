@@ -1,39 +1,55 @@
 "strict mode";
 
-const form = document.getElementById("form");
-const email = document.getElementById("email");
+const btnOne = document.querySelector(".btn");
+const errorOne = document.querySelector(".error");
+const emailOne = document.querySelector(".email");
 
-form.addEventListener("submit", (e) => {
+const btnTwo = document.querySelector(".btnTwo");
+const errorTwo = document.querySelector(".errorTwo");
+const emailTwo = document.querySelector(".emailTwo");
+
+//btn one
+btnOne.addEventListener("click", (e) => {
   e.preventDefault();
-  validateDefault();
+  if (checkEmail(emailOne)) {
+    errorMessage(errorOne);
+    emailOne.classList.add("err");
+  } else {
+    successMessage(errorOne);
+    emailOne.classList.remove("err");
+  }
 });
 
-const setError = (element, message) => {
-  const inputControl = element.parentElement;
-  const errorDisplay = inputControl.querySelector(".error");
-  errorDisplay.innerText = message;
-  inputControl.classList.add("error");
+//btn two
+btnTwo.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (checkEmail(emailTwo)) {
+    errorMessage(errorTwo);
+    emailTwo.classList.add("err");
+  } else {
+    successMessage(errorTwo);
+    emailTwo.classList.remove("err");
+  }
+});
+
+//checking email
+const checkEmail = (email) => {
+  console.log(email.value === "" || isValidEmail(email));
+  return email.value === "" || isValidEmail(email);
 };
-const setSuccess = (element) => {
-  const inputControl = element.parentElement;
-  const errorDisplay = inputControl.querySelector(".error");
-  errorDisplay.innerText = "";
-  inputControl.classList.remove("error");
+
+//error mesaage
+const errorMessage = (error) => {
+  error.textContent = "Please check your email";
+};
+
+//successmessage
+const successMessage = (success) => {
+  success.textContent = "";
 };
 
 const isValidEmail = (email) => {
-  const validRegex =
-    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-  return validRegex.test(String(email).toLowerCase());
+  return /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
+    email
+  );
 };
-
-const validateDefault = () => {
-  const emailValue = email.value.trim();
-
-  if (!isValidEmail(emailValue)) {
-    setError(email, "Please check your email");
-  } else {
-    setSuccess(email, "");
-  }
-};
-
