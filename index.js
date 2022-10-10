@@ -8,48 +8,38 @@ const btnTwo = document.querySelector(".btnTwo");
 const errorTwo = document.querySelector(".errorTwo");
 const emailTwo = document.querySelector(".emailTwo");
 
-//btn one
+//button one
 btnOne.addEventListener("click", (e) => {
   e.preventDefault();
-  if (checkEmail(emailOne)) {
-    errorMessage(errorOne);
-    emailOne.classList.add("err");
-  } else {
-    successMessage(errorOne);
-    emailOne.classList.remove("err");
-  }
+  validateEmail(emailOne, errorOne);
 });
 
-//btn two
+//button two
 btnTwo.addEventListener("click", (e) => {
   e.preventDefault();
-  if (checkEmail(emailTwo)) {
-    errorMessage(errorTwo);
-    emailTwo.classList.add("err");
-  } else {
-    successMessage(errorTwo);
-    emailTwo.classList.remove("err");
-  }
+  validateEmail(emailTwo, errorTwo);
 });
 
-//checking email
-const checkEmail = (email) => {
-  console.log(email.value === "" || isValidEmail(email));
-  return email.value === "" || isValidEmail(email);
-};
-
-//error mesaage
+//error message
 const errorMessage = (error) => {
   error.textContent = "Please check your email";
 };
 
-//successmessage
+//success message
 const successMessage = (success) => {
   success.textContent = "";
 };
 
-const isValidEmail = (email) => {
-  return /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
-    email
-  );
+const validateEmail = (email, error) => {
+  let validRegex =
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  if (email.value.match(validRegex)) {
+    successMessage(error);
+    email.classList.remove("err");
+    return true;
+  } else {
+    errorMessage(error);
+    email.classList.add("err");
+    return false;
+  }
 };
